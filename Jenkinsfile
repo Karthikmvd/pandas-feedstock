@@ -6,7 +6,7 @@ node('node') {
     try {
 
        stage('Checkout'){
-
+          echo $PATH 
           checkout scm
        }
 
