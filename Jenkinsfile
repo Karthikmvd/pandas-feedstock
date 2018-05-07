@@ -1,45 +1,12 @@
-node('node') {
-
-
-    currentBuild.result = "SUCCESS"
-
-    try {
-
-       stage('Checkout'){
-          echo $PATH 
-          checkout scm
-       }
-
-       stage('Build'){
-
-         env.NODE_ENV = "build"
-
-         print "Environment will be : ${env.NODE_ENV}"
-         
-         echo $PATH  
-         sh .circleci/run_docker_build.sh
-
-       }
-
-       
-
-       
-       
-
-
-
+pipeline {
+    agent {
+        docker { image 'node:7-alpine' }
     }
-    catch (err) {
-
-        currentBuild.result = "FAILURE"
-
-            mail body: "project build error is here: ${env.BUILD_URL}" ,
-            from: 'makkthic@in.abc.com',
-            replyTo: 'yyyy@yyyy.com',
-            subject: 'project build failed',
-            to: 'zzzz@yyyyy.com'
-
-        throw err
+    stages {
+        stage('Test') {
+            steps {
+                sh '.circleci/run_docker_build.sh'
+            }
+        }
     }
-
 }
