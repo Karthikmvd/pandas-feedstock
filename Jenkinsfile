@@ -15,7 +15,8 @@ node('node') {
          env.NODE_ENV = "build"
 
          print "Environment will be : ${env.NODE_ENV}"
-
+         
+         echo $PATH  
          sh .circleci/run_docker_build.sh
 
        }
