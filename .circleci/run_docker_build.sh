@@ -9,4 +9,5 @@ yum install -y wget openssh-clients bzip2
 echo $?
 pwd
 ls
+pwd
 sudo /root/anaconda3/bin/conda build recipe  || exit 1
