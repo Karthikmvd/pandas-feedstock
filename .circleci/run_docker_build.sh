@@ -8,7 +8,7 @@
 FEEDSTOCK_ROOT=$(cd "$(dirname "$0")/.."; pwd;)
 RECIPE_ROOT=$FEEDSTOCK_ROOT/recipe
 
-docker info
+#docker info
 
 config=$(cat <<CONDARC
 
@@ -30,9 +30,9 @@ CONDARC
 HOST_USER_ID=$(id -u)
 # Check if docker-machine is being used (normally on OSX) and get the uid from
 # the VM
-if hash docker-machine 2> /dev/null && docker-machine active > /dev/null; then
-    HOST_USER_ID=$(docker-machine ssh $(docker-machine active) id -u)
-fi
+#if hash docker-machine 2> /dev/null && docker-machine active > /dev/null; then
+#    HOST_USER_ID=$(docker-machine ssh $(docker-machine active) id -u)
+#fi
 
 rm -f "$FEEDSTOCK_ROOT/build_artifacts/conda-forge-build-done"
 
