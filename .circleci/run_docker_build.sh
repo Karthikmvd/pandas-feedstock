@@ -6,4 +6,4 @@
 # benefit from the improvement.
 export PATH=$PATH:/root/anaconda3/bin/conda
 echo $?
-/root/anaconda3/bin/conda build /home/conda/recipe_root --quiet || exit 1
+sudo /root/anaconda3/bin/conda build /home/conda/recipe_root --quiet || exit 1
