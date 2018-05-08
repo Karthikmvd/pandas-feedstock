@@ -4,6 +4,6 @@
 # will be lost next time ``conda smithy rerender`` is run. If you would like to make permanent
 # changes to this script, consider a proposal to conda-smithy so that other feedstocks can also
 # benefit from the improvement.
-sudo source /root/.bashrc
+source /root/.bashrc
 echo $?
 conda build /home/conda/recipe_root --quiet || exit 1
