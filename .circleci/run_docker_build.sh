@@ -9,4 +9,4 @@ yum install -y wget openssh-clients bzip2
 echo $?
 pwd
 ls
-sudo /root/anaconda3/bin/conda build /home/conda/recipe_root --quiet || exit 1
+sudo /root/anaconda3/bin/conda build recipe --quiet || exit 1
