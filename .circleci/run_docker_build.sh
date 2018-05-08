@@ -7,4 +7,6 @@
 export PATH=$PATH:/root/anaconda3/bin/conda
 yum install -y wget openssh-clients bzip2
 echo $?
+pwd
+ls
 sudo /root/anaconda3/bin/conda build /home/conda/recipe_root --quiet || exit 1
