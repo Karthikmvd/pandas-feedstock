@@ -7,9 +7,9 @@
 yum install -y wget openssh-clients bzip2
 #wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 #sh Anaconda3-5.1.0-Linux-x86_64.sh -b -p /opt/conda
-export PATH=$PATH:/opt/conda/bin/conda
+#export PATH=$PATH:/opt/conda/bin/conda
 echo $?
 pwd
 ls
 pwd
-sudo conda build recipe  || exit 1
+sudo /opt/conda/bin/conda build recipe  || exit 1
