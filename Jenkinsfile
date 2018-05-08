@@ -1,9 +1,23 @@
 pipeline {
-    
+    agent any
+
     stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+                sh '.circleci/run_docker_build.sh'
+            }
+        }
         stage('Test') {
             steps {
-                sh '.circleci/run_docker_build.sh'
+                echo 'Testing..'
+                
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
