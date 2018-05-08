@@ -5,5 +5,6 @@
 # changes to this script, consider a proposal to conda-smithy so that other feedstocks can also
 # benefit from the improvement.
 export PATH=$PATH:/root/anaconda3/bin/conda
+yum install -y wget openssh-clients bzip2
 echo $?
 sudo /root/anaconda3/bin/conda build /home/conda/recipe_root --quiet || exit 1
