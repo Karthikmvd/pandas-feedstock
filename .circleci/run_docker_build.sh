@@ -5,9 +5,9 @@
 # changes to this script, consider a proposal to conda-smithy so that other feedstocks can also
 # benefit from the improvement.
 yum install -y wget openssh-clients bzip2
-wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-sh Anaconda3-5.1.0-Linux-x86_64.sh -b -p /opt/conda
-export PATH=$PATH:/opt/conda
+#wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+#sh Anaconda3-5.1.0-Linux-x86_64.sh -b -p /opt/conda
+export PATH=$PATH:/opt/conda/bin/conda
 echo $?
 pwd
 ls
