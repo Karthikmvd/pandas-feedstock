@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo 'Building.############.'
                 sh '.circleci/run_docker_build.sh'
             }
         }
